@@ -1,21 +1,18 @@
 import { BASE_URL, fetchReq } from '../fetch.js';
 
-const path = new URL('/articles', BASE_URL);
-
-/**
+const path = new URL('/articles', BASE_URL);/**
  * 게시글 등록
  * @typedef { Object } Article
- * @property { number } id - 게시글 ID
+ * @property { number | undefined } id - 게시글 ID
  * @property { string } title - 제목
  * @property { string } content - 내용
  * @property { string } image - 이미지 URL
  */
-
 /**
  * @typedef { Object } QueryObj
- * @property { number | undefined } page
- * @property { number | undefined } pageSize
- * @property { string | undefined } keyword
+ * @property { number } [page]
+ * @property { number } [pageSize]
+ * @property { string } [keyword]
  */
 /**
  * 게시글 목록 조회
